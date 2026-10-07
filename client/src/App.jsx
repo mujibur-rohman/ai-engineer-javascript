@@ -71,15 +71,12 @@ export default function App() {
           {messages.length === 0 && (
             <div className="empty">
               <span className="chip">01</span>
-              <h2>Satu pesan. Satu perjalanan.</h2>
-              <p>React → Express → respons di layar</p>
+              <h2>AI Chatbot</h2>
               <button
                 type="button"
-                onClick={() =>
-                  setInput("Jelaskan API dalam satu kalimat sederhana.")
-                }
+                onClick={() => setInput("Halo, Selamat Pagi!")}
               >
-                Coba pertanyaan contoh ↗
+                Coba Sapa AI ↗
               </button>
             </div>
           )}
