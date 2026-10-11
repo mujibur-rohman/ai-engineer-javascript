@@ -1,4 +1,5 @@
 import { GoogleGenAI } from "@google/genai";
+import { customerSupportPrompt } from "./prompt.js";
 
 export async function generateReply(message) {
   const apiKey = process.env.GEMINI_API_KEY?.trim();
@@ -11,6 +12,7 @@ export async function generateReply(message) {
     model,
     contents: message,
     config: {
+      systemInstruction: customerSupportPrompt.instruction,
       httpOptions: {
         timeout: 20000,
         retryOptions: { attempts: 1 },
